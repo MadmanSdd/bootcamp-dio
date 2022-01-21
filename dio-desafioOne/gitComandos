@@ -1,0 +1,11 @@
+https://git-scm.com/download
+
+Git add
+Este comando adiciona os arquivos solicitados ao ambiente de stage
+Git commit
+Agora fazemos a gravação em si das modificações forma muito usada é o git commit -m
+Git push
+Subir essas modificações no nosso repositório remoto.
+Git status
+Modificações já foram enviadas para o stage
+
