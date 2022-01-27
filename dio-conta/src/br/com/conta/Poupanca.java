@@ -1,6 +1,6 @@
 package br.com.conta;
 
-public class Poupanca extends Conta{
+public class Poupanca extends Conta implements InterfaceConta{
 
 	public Poupanca() {
 		super();
@@ -20,5 +20,16 @@ public class Poupanca extends Conta{
 	public void sacar(double valorDoSaque) {
 		super.setSaldo((super.getSaldo()-valorDoSaque));
 		System.out.println(this.getNome()+" Conta: "+super.getNumeroConta()+" Saldo atual: "+super.getSaldo());
+	}
+
+	@Override
+	public void transferencia(Conta contaRecebe, double valor) {
+		// TODO Auto-generated method stub
+		this.setSaldo(this.getSaldo()-valor);;
+		contaRecebe.setSaldo(contaRecebe.getSaldo()+valor);
+		System.out.println("Transferencia Realizado com sucesso!");
+		System.out.println("Conta Atual: "+this.getNumeroConta()+" Nome: "+this.getNome()
+		+" Saldo Disponivel: "+this.getSaldo()
+		+" Conta Transferida: "+contaRecebe.getNumeroConta());
 	}
 }

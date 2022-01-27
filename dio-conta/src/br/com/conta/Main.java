@@ -12,7 +12,7 @@ public class Main {
 		cc1.sacar(800);
 		
 		Poupanca p1 = new Poupanca(343,300,"Maria viviane");
-		Conta.transferencia(p1, 100, cc1);
+		p1.transferencia(cc1, 100);
 		System.out.println(cc1.toString());
 
 	}
